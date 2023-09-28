@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@700&family=Martian+Mono&family=Mooli&display=swap");
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lean {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes scaleY {
+  0% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(1.1);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  75% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+* {
+  font-family: "Martian Mono", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #18181c;
+  color: #dcdcdc;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.setup {
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.setup > h1 {
+  margin-bottom: 100px;
+}
+.setup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.setup-content > label {
+  margin-bottom: 3px;
+}
+.setup-content > input {
+  width: 300px;
+  height: 30px;
+  padding: 0 20px;
+  margin-bottom: 15px;
+  background-color: #932bd4;
+  color: #dcdcdc;
+  border-radius: 20px;
+  border: none;
+}
+.setup-content > input:focus {
+  outline: none;
+  animation: 0.5s ease-in-out lean;
+}
+.setup-content > button {
+  margin: 20px;
+  width: 100px;
+  height: 30px;
+  background-color: #c32bd4;
+  color: #dcdcdc;
+  border: none;
+  border-radius: 5px;
+  transition: 4s transform ease-out 0.2s;
+}
+.setup-content > button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.setup-content > button:active {
+  transform: scale(0.7);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0 10px 0;
+}
+.profile > p {
+  margin-bottom: 25px;
+}
+.profile > p > img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
+.profile .name {
+  font-size: 18px;
+  transition: 0.5s transform ease-out 0.2s;
+}
+.profile .name:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.normal-animate {
+  animation: 10s ease infinite pulse;
+}
+
+.happy-animate {
+  animation: 1s ease-in-out infinite scaleY;
+}
+
+.animation-paused {
+  animation-play-state: paused;
+}
+
+.display {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.display .settings-wrapper {
+  position: absolute;
+  top: 130px;
+  right: 10px;
+}
+.display .message {
+  text-align: center;
+  border: 2px solid #932bd4;
+  width: 350px;
+  height: 120px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: #932bd4;
+  color: #dcdcdc;
+  border: none;
+  border-radius: 5px;
+  transition: 4s transform ease-out 0.2s;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.btn:active {
+  transform: scale(0.7);
+}
+
+.settings {
+  background-color: rgba(24, 24, 28, 0.8588235294);
+  width: 200px;
+  height: 80px;
+  font-size: 12px;
+}
+.settings-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.settings-element > .btn {
+  font-size: 8px;
+  width: 80px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-color: #c32bd4;
+  color: #dcdcdc;
+  border: none;
+  border-radius: 5px;
+  transition: 4s transform ease-out 0.2s;
+}
+.settings-element > .btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.settings-element > .btn:active {
+  transform: scale(0.7);
+}
+
+.x-mark-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.x-mark-wrapper:hover {
+  cursor: pointer;
+}
+
+.checkbox1:hover {
+  cursor: pointer;
+}
+
+.gear {
+  transform: scale(1.4);
+}
+.gear :hover {
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */
