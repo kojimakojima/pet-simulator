@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-function Settings({ dispatch, animation }) {
+function Settings({ dispatch, animation = true }) {
   const [isOpen, setIsOpen] = useState(false);
   return isOpen ? (
     <div className="settings">

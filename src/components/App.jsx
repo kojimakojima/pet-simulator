@@ -15,6 +15,12 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case "start":
+      if (action.payload.name === "") {
+        alert("Please set name and URL for image");
+        return {
+          ...state,
+        };
+      }
       return {
         ...state,
         name: action.payload.name,
